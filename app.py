@@ -66,7 +66,7 @@ def predict():
         temp_array = temp_array + [overs, runs, wickets, runs_in_prev_5, wickets_in_prev_5]
         
         data = np.array([temp_array])
-        my_prediction = int(regressor.predict(data)[0])
+        my_prediction = int(r_random.predict(data)[0])
               
         return render_template('result.html', lower_limit = my_prediction-10, upper_limit = my_prediction+5)
 
